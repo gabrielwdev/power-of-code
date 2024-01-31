@@ -16,5 +16,5 @@ html {
 
 ::selection {
   color: var(--cor-branco);
-    background-color: var(--cor-azul);
+  background-color: var(--cor-azul);
 }

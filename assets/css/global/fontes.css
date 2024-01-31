@@ -1,9 +1,1 @@
-@font-face {
-  font-family: 'font-bold';
-    src: url('../../files/fonts/fonte-bold.woff2') format('woff2');
-  }
-  
-  @font-face {
-    font-family: 'font-regular';
-    src: url('../../files/fonts/fonte-regular.woff2') format('woff2');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
