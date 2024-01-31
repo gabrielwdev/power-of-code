@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #FFFFFF0F;
+  height: 70px;
+  padding: 0 80px;
+}
+
+nav img.logo {
+  width: 100%;
+  max-width: 130px;
+  filter: brightness(-1000%);
+}

@@ -11,10 +11,10 @@
 
 body,
 html {
-  background-color: black;
+  background-color: var(--cor-preto);
 }
 
 ::selection {
-  color: white;
-  background-color: red;
+  color: var(--cor-branco);
+    background-color: var(--cor-azul);
 }

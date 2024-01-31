@@ -1,9 +1,9 @@
 :root {
 
-  --cor-preto: ;
-  --cor-branco: ;
-  --cor-azul: #1da6ff --bold: '';
-  --regular: '';
+  --cor-preto: #000000;
+    --cor-branco: #FFFFFF;
+    --cor-azul: #1da6ff --bold: 'fonte-bold';
+    --regular: 'fonte-regular';
 
   --f1: clamp(0.8rem, 1vw, 1.0rem);
   --f2: clamp(1.0rem, 1vw, 1.2rem);
