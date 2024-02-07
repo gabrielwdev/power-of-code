@@ -1,0 +1,280 @@
+section.pelicula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 80px;
+}
+
+section.pelicula .quadro{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #101014, #16161b);
+    background: -webkit-linear-gradient(0deg, #101014, #16161b);
+    position: relative;
+    overflow: hidden;
+}
+
+section.pelicula .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    z-index: 2;
+}
+
+section.pelicula .texto img {
+    width: 100%;
+    max-width: 200px;
+    filter: brightness(1000%);
+}
+
+section.pelicula .texto h2 {
+    font-family: var(--bold);
+    font-weight: 900;
+    font-size: var(--f5);
+    color: var(--cor-branco);
+    text-transform: uppercase;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 30px 0 10px 0;
+
+}
+section.pelicula .texto h2 span {
+    color: var(--cor-azul);
+}
+
+section.pelicula .texto p {
+    font-family: var(--regular);
+    font-weight: 300;
+    font-size: var(--f2);
+    line-height: 1.5;
+    color: var(--cor-branco);
+    opacity: 0.7;
+    max-width: 450px;
+}
+
+section.pelicula .texto h3 a {
+    color: var(--cor-azul);
+    margin-right: 5px;
+}
+
+section.pelicula .texto h3 {
+    display: flex;
+    align-items: center;
+    font-family: var(--regular);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    margin: 15px 0 10px 0px;
+}
+section.pelicula .texto a.principal {
+    font-family: var(--bold);
+    font-weight: 900;
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    background-color: var(--cor-azul);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin: 30px 0 10px 0;
+    transition: all .3s;
+}
+
+section.pelicula .texto a:hover {
+    background-color: var(--cor-verde);
+}
+
+section.pelicula .itens{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    z-index: 2;
+}
+section.pelicula .itens .item.destaque {
+    background-color: transparent;
+    border: 1px solid #ffffff10;
+}
+
+section.pelicula .itens .item {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #ffffff0a;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: calc(50% - 5px);
+}
+section.pelicula .itens .item .foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+section.pelicula .itens .item h3 {
+    font-family: var(--regular);
+    font-size: var(--f1);
+    color: var(--cor-branco);
+    margin: 20px 0 10px 0;
+}
+
+section.pelicula .itens .item p {
+    font-family: var(--regular);
+    font-size: var(--f1);
+    color: var(--cor-branco);
+    max-width: 280px;
+    opacity: .7;
+    line-height: 1.5;
+}
+
+section.pelicula .quadro .blush {
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(#1da6ff , transparent 50%);
+    border-radius: 50%;
+    opacity: .2;
+    position: absolute;
+    z-index: 1;
+}
+
+
+section.pelicula .quadro .blush.um {
+    bottom: -300px;
+    left: 100px;
+    animation: blushOpacidade 10s linear infinite;
+}
+
+section.pelicula .quadro .blush.dois {
+    top: -300px;
+    right: 100px;
+    animation: blushOpacidade 10s linear infinite;
+}
+
+@keyframes blushOpacidade {
+    0% {
+        opacity: .1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: .3;
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: .1;
+    }
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+    section.pelicula{
+        padding: 50px 30px;
+    }
+    
+    section.pelicula .quadro{
+        padding: 30px 0;
+        flex-direction: column;
+    }
+    
+    section.pelicula .texto {
+        padding: 0 30px 40px 30px;
+        width: 100%;
+    }
+    
+    section.pelicula .texto img {
+        max-width: 150px;
+    }
+    
+    section.pelicula .texto h2 {
+        font-size: var(--f4);
+        line-height: 1.3;
+    }
+    section.pelicula .texto h2 span {
+        color: var(--cor-azul);
+    }
+    
+    section.pelicula .texto p {
+        font-family: var(--regular);
+        font-weight: 300;
+        font-size: var(--f2);
+        line-height: 1.5;
+        color: var(--cor-branco);
+        opacity: 0.7;
+        max-width: 450px;
+    }
+    
+    section.pelicula .texto h3 a {
+        color: var(--cor-azul);
+    }
+    
+    section.pelicula .texto h3 {
+        display: flex;
+        align-items: center;
+        font-family: var(--regular);
+        font-size: var(--f2);
+        color: var(--cor-branco);
+        margin: 15px 0 10px 0;
+    }
+    section.pelicula .texto a.principal {
+        font-family: var(--bold);
+        font-weight: 900;
+        font-size: var(--f2);
+        color: var(--cor-branco);
+        background-color: var(--cor-azul);
+        padding: 15px 25px;
+        border-radius: 10px;
+        margin: 30px 0 10px 0;
+        transition: all .3s;
+    }
+    
+    section.pelicula .texto a:hover {
+        background-color: var(--cor-verde);
+    }
+    
+    section.pelicula .itens{
+        width: 100%;
+    }
+    
+    section.pelicula .itens .item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        background-color: transparent;
+        border-top: 1px solid #ffffff1b;
+        margin: 0;
+        padding: 30px;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    section.pelicula .itens .item.destaque {
+        border-top: 1px solid #ffffff1b;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+    }
+    
+        section.pelicula .itens .item .foto {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        margin: 0 15px 0 0;
+    }
+    
+    section.pelicula .itens .item h3 {
+        font-family: var(--regular);
+        font-size: var(--f1);
+        color: var(--cor-branco);
+        margin: 0 0 10px 0;
+    }
+    
+}
