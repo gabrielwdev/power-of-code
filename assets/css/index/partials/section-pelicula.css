@@ -4,7 +4,39 @@ section.pelicula{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 80px;
+    padding: 20px 80px 0 80px;
+}
+
+section.pelicula.um {
+    padding: 80px 80px 0 80px;
+}
+
+section.pelicula.dois .quadro {
+    flex-direction: row-reverse;
+}
+
+section.pelicula.dois .quadro .texto {
+    padding: 0 0 0 50px;
+}
+
+section.pelicula.dois .quadro .blush {
+    background: radial-gradient(#ffffff , transparent 50%);
+}
+
+section.pelicula.quatro .quadro {
+    flex-direction: row-reverse;
+}
+
+section.pelicula.quatro .quadro .texto {
+    padding: 0 0 0 50px;
+}
+
+section.pelicula.quatro .quadro .blush {
+    background: radial-gradient(#ffffff , transparent 50%);
+}
+
+section.pelicula.quatro {
+    padding: 20px 80px 80px 80px;
 }
 
 section.pelicula .quadro{
@@ -28,9 +60,9 @@ section.pelicula .texto {
 }
 
 section.pelicula .texto img {
+    filter: brightness(10000%);
     width: 100%;
     max-width: 200px;
-    filter: brightness(1000%);
 }
 
 section.pelicula .texto h2 {
@@ -176,14 +208,46 @@ section.pelicula .quadro .blush.dois {
 
 @media screen and (max-width: 1000px) {
     section.pelicula{
-        padding: 50px 30px;
+        padding: 20px 30px 0 30px;
     }
     
-    section.pelicula .quadro{
-        padding: 30px 0;
+    section.pelicula.um {
+        padding: 50px 30px 0 30px;
+    }
+
+    section.pelicula.um .quadro {
         flex-direction: column;
     }
     
+    section.pelicula.dois .quadro {
+        flex-direction: column;
+    }
+    
+    section.pelicula.dois .quadro .texto {
+        padding: 0 30px 40px 30px;
+    }
+    
+    section.pelicula.tres .quadro {
+        flex-direction: column;
+    }
+    
+    section.pelicula.tres .quadro .texto {
+        padding: 0 30px 40px 30px;
+    }
+    
+    section.pelicula.quatro .quadro{
+        flex-direction: column;
+    }
+
+    section.pelicula.quatro{
+        padding: 20px 30px 50px 30px;
+    }
+
+    
+    section.pelicula.quatro .quatro .texto{
+        padding: 0 30px 40px 30px;
+    }
+
     section.pelicula .texto {
         padding: 0 30px 40px 30px;
         width: 100%;
