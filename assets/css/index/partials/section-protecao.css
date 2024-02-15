@@ -1,0 +1,180 @@
+section.protecao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 80px;
+    background: linear-gradiente(0deg, #1DA6FF, #0B6EB0, #0B50b0, #1DA6FF);
+    background: -webkit-linear-gradient(0deg, #1DA6FF, #0B6EB0, #0B50b0, #1DA6FF);
+    overflow: hidden;
+}
+
+section.protecao .imagem{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+section.protecao .imagem .foto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    animation: fotoMexendo 10s linear infinite;
+}
+
+@keyframes fotoMexendo {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+section.protecao .imagem .circulo {
+    position: absolute;
+    border-radius: 50%;
+}
+
+section.protecao .imagem .circulo.um {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 30px 30px 0 #ffffff2a;
+    border-top: 1px solid var(--cor-branco);
+    animation: girandoCirculo 3s linear infinite;
+}
+
+section.protecao .imagem .circulo.dois {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 -30px 30px 0 #ffffff2a;
+    border-top: 1px solid var(--cor-branco);
+    animation: girandoCirculo 4s linear infinite;
+}
+
+section.protecao .imagem .circulo.tres {
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 50px 50px 0 #ffffff2a;
+    border-top: 1px solid var(--cor-branco);
+    animation: girandoCirculo 5s linear infinite;
+}
+
+@keyframes girandoCirculo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section.protecao .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    z-index: 2;
+}
+
+
+section.protecao .texto h2 {
+    font-family: var(--bold);
+    font-weight: 900;
+    font-size: var(--f6);
+    color: var(--cor-branco);
+    text-transform: uppercase;
+    line-height: 1.3;
+    max-width: 400px;
+    
+}
+section.protecao .texto h2 span {
+    color: var(--cor-azul);
+}
+
+section.protecao .texto p {
+    font-family: var(--regular);
+    font-weight: 300;
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    opacity: 0.7;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 5px 0 20px 0;
+}
+
+section.protecao .texto a {
+    font-family: var(--bold);
+    font-weight: 900;
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    background-color: var(--cor-azul);
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+section.protecao .texto a:hover {
+    color: var(--cor-azul);
+    background-color: var(--cor-branco);
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+    section.protecao {
+        flex-direction: column;
+        padding: 60px 30px;
+    }
+    
+    section.protecao .imagem{
+        width: 100%;
+    }
+    
+    section.protecao .imagem .foto {
+        width: 200px;
+        height: 200px;
+    }
+    
+    section.protecao .imagem .circulo.um {
+        width: 250px;
+        height: 250px;
+    }
+    
+    section.protecao .imagem .circulo.dois {
+        width: 300px;
+        height: 300px;
+    }
+    
+    section.protecao .imagem .circulo.tres {
+        width: 400px;
+        height: 400px;
+    }
+    
+    section.protecao .texto {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 80px 0 0 0;
+    }
+    
+    
+    section.protecao .texto h2 {
+        font-size: var(--f5);
+        
+    }
+    section.protecao .texto h2 span {
+        color: var(--cor-azul);
+    }
+    
+    section.protecao .texto p {
+        max-width: 300px;
+    }
