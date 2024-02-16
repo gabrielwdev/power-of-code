@@ -1,0 +1,108 @@
+section.quemusa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+section.quemusa .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 80px;
+    z-index: 2;
+}
+
+section.quemusa .titulo h2 {
+    font-family: var(--bold);
+    font-weight: 900;
+    font-size: var(--f5);
+    color: var(--cor-branco);
+    line-height: 1.3;
+    max-width: 600px;
+}
+
+section.quemusa .titulo h2 span {
+    color: var(--cor-azul);
+}
+
+section.quemusa .titulo p {
+    font-family: var(--regular);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    line-height: 1.3;
+    opacity: 0.7;
+    margin: 5px 0 0 0;
+}
+
+section.quemusa .slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 50px 70px 0 80px;
+    overflow-x: scroll;
+}
+
+section.quemusa .slide .itens{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    animation: slideItens 60s linear infinite;
+}
+
+@keyframes slideItens {
+    0%  {
+        transform: translate(0, 0);
+    }
+    100%  {
+        transform: translate(-1400px, 0);
+    }
+}
+
+section.quemusa .slide::-webkit-scrollbar{
+    display: none;
+}
+
+section.quemusa .slide .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    min-width: 200px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    background: linear-gradient(0deg, #101014, #16161b);
+    background: linear-gradient(0deg, #101014, #16161b);
+}
+
+section.quemusa .slide .item img {
+    width: 50%;
+    max-width: 200px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+    section.quemusa{
+        padding: 60px 0;
+    }
+    
+    section.quemusa .titulo {
+        padding: 0 30px;
+        z-index: 2;
+    }
+    
+    section.quemusa .titulo h2 {
+        font-size: var(--f4);
+    }
+
+    section.quemusa .slide {
+        padding: 30px 70px 0 80px;
+    }
+}
